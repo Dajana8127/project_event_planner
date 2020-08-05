@@ -98,7 +98,10 @@ WSGI_APPLICATION = 'project_event_planner.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 DATABASES = {
-    'default': DB
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'project_event_planner',
+    }
 }
 
 # DRF

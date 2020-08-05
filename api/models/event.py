@@ -7,8 +7,9 @@ class Event(models.Model):
   # https://docs.djangoproject.com/en/3.0/ref/models/fields/
   name = models.CharField(max_length=100)
   place = models.CharField(max_length=100)
-  date = models.DateField()
-  time = models.TimeField()
+  # deal with this at the end
+  # date = models.DateField()
+  # time = models.TimeField()
   description = models.CharField(max_length=250)
   # just an idea
   # image = models.CharField(max_length=350)
@@ -27,7 +28,7 @@ class Event(models.Model):
         'id': self.id,
         'name': self.name,
         'place': self.place,
-        'date': self.date,
-        'time': self.time,
+        # 'date': self.date,
+        # 'time': self.time,
         'description': self.description
     }

@@ -47,7 +47,7 @@ class EventDetail(generics.RetrieveUpdateDestroyAPIView):
     def delete(self, request, pk):
         """Delete request"""
         event = get_object_or_404(Event, pk=pk)
-        if not request.user.id == event['owner']:
+        if not request.user.id == event.owner.id:
             raise PermissionDenied('Unauthorized, you do not own this event')
         event.delete()
         return Response(status=status.HTTP_204_NO_CONTENT)
@@ -60,8 +60,7 @@ class EventDetail(generics.RetrieveUpdateDestroyAPIView):
 
         # Locate Event
         event = get_object_or_404(Event, pk=pk)
-        # Check if user is  the same
-        if not request.user.id == event['owner']:
+        if not request.user.id == event.owner.id:
             raise PermissionDenied('Unauthorized, you do not own this event')
 
         # Add owner to data object now that we know this user owns the resource

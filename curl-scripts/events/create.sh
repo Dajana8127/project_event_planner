@@ -8,8 +8,8 @@ curl "http://localhost:8000/events" \
   --data '{
     "event": {
       "name": "'"${NAME}"'",
-      "color": "'"${COLOR}"'",
-      "ripe": "'"${RIPE}"'"
+      "place": "'"${PLACE}"'",
+      "description": "'"${DESCRIPTION}"'"
     }
   }'
 
