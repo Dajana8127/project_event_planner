@@ -2,7 +2,7 @@ from django.contrib import admin
 from django.contrib.auth.admin import UserAdmin as BaseUserAdmin
 
 from .models.user import User
-from .models.event import Event
+from .models.event1 import Event
 
 class UserAdmin(BaseUserAdmin):
     ordering = ['id']

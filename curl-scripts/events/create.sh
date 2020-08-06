@@ -6,7 +6,7 @@ curl "http://localhost:8000/events" \
   --header "Content-Type: application/json" \
   --header "Authorization: Token ${TOKEN}" \
   --data '{
-    "event": {
+    "event1": {
       "name": "'"${NAME}"'",
       "place": "'"${PLACE}"'",
       "description": "'"${DESCRIPTION}"'"

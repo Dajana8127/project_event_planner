@@ -1,7 +1,7 @@
 from django.contrib.auth import get_user_model
 from rest_framework import serializers
 
-from .models.event import Event
+from .models.event1 import Event
 from .models.user import User
 
 
