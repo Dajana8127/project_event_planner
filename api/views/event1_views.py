@@ -12,11 +12,13 @@ from ..serializers import EventSerializer, UserSerializer
 
 # Create your views here.
 class Events(generics.ListCreateAPIView):
-    permission_classes=(IsAuthenticated,)
+    authentication_classes = ()
+    permission_classes=()
     def get(self, request):
         """Index request"""
-        # events = Event.objects.all()
-        events = Event.objects.filter(owner=request.user.id)
+        # Return all events, but still require a token by not overriding the permissions classes
+        events = Event.objects.all()
+        # events = Event.objects.filter(owner=request.user.id)
         data = EventSerializer(events, many=True).data
         return Response(data)
 
@@ -24,7 +26,7 @@ class Events(generics.ListCreateAPIView):
     def post(self, request):
         """Create request"""
         # Add user to request object
-        request.data['event1']['owner'] = request.user.id
+        # request.data['event1']['owner'] = request.user.id
         # Serialize/create event1
         event1 = EventSerializer(data=request.data['event1'])
         if event1.is_valid():
