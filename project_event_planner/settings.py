@@ -31,6 +31,7 @@ if os.getenv('ENV') == 'development':
   CORS_ORIGIN_WHITELIST = ['http://localhost:7165']
 else:
   DB = dj_database_url.config()
+  print(DB)
   DEBUG = False
   CORS_ORIGIN_WHITELIST = [
     os.getenv('CLIENT_ORIGIN')
