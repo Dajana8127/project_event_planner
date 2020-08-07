@@ -8,7 +8,7 @@ from .models.user import User
 class EventSerializer(serializers.ModelSerializer):
     class Meta:
         model = Event
-        fields = ('id', 'name', 'place', 'description', 'owner')
+        fields = ('id', 'name', 'place', 'description', 'date', 'time', 'owner')
 
 class UserSerializer(serializers.ModelSerializer):
     class Meta:
