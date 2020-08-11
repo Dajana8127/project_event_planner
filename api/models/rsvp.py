@@ -12,6 +12,7 @@ class RSVP(models.Model):
   )
   event = models.ForeignKey(
       Event,
+      related_name='rsvps',
       on_delete=models.CASCADE
   )
 
