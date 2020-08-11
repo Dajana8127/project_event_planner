@@ -3,6 +3,7 @@ from rest_framework import serializers
 
 from .models.event1 import Event
 from .models.user import User
+from .models.rsvp import RSVP
 
 
 class EventSerializer(serializers.ModelSerializer):
@@ -27,3 +28,8 @@ class ChangePasswordSerializer(serializers.Serializer):
     model = User
     old = serializers.CharField(required=True)
     new = serializers.CharField(required=True)
+
+class RSVPSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = RSVP
+        fields = '__all__'
