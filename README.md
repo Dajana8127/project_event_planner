@@ -30,14 +30,38 @@
   - Node.js
   - React Bootstrap
   - Axios
-  - PostgreSQL
+  - eventgreSQL
 
 # Wireframes
 ![Wireframe](https://i.imgur.com/4oUl6xO.jpg?1)
 
 # ERD
-![Wireframe](https://i.imgur.com/FxWqBor.jpg)
+![ERD](https://i.imgur.com/FxWqBor.jpg)
+
+# API End Points
+
+| Verb   | URI Pattern               | Controller#Action |
+|--------|---------------------------|-------------------|
+| POST   | `/sign-up/`               | `users#signup`    |
+| POST   | `/sign-in/`               | `users#signin`    |
+| DELETE | `/sign-out`               | `users#signout`   |
+| PATCH  | `/change-password/`       | `users#changepw`  |
+| GET    | `/events`                 | `events#index`    |
+| POST   | `/events/`                | `events#create`   |
+| GET    | `/events/:id`             | `events#show`     |
+| PATCH  | `/events/:id`             | `events#update`   |
+| DELETE | `/events/:id`             | `events#destroy`  |
+| POST   | `/rsvps/`                 | `rsvps#create`    |
+| DELETE | `/rsvps/:id`              | `rsvps#destroy`   |
 
 
 # Future Development Plans
 I would like to add rsvp option so user can rsvp to events and make the code more clean.
+
+# Setup Steps
+
+1. Fork and clone this repository.
+2. Run `pipenv shell` to enter the virtual environment
+3. Create a database named `project_event_planner` in PostgreSQL by running `psql` to enter the shell, and then `CREATE DATABASE project_event_planner`
+3. In your terminal, run `python manage.py makemigrations` and `python manage.py migrate` to ensure your database is up to date
+4. Run `python manage.py runserver` to spin up your local server
