@@ -32,7 +32,7 @@ if os.getenv('ENV') == 'development':
 else:
   DB = dj_database_url.config()
   print(DB)
-  DEBUG = False
+  DEBUG = True
   CORS_ORIGIN_WHITELIST = [
     os.getenv('CLIENT_ORIGIN')
   ]
