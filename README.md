@@ -1,6 +1,6 @@
 # Event Planner Client Application
 
-  The event planner app is a client facing app that allows clients to create events.
+  The event planner app is a client facing app that allows clients to create, update and delete events. Users can see all created events and RSVP to them. 
 
 # Links
 ### Deployed Client Site
@@ -30,7 +30,7 @@
   - Node.js
   - React Bootstrap
   - Axios
-  - eventgreSQL
+  - PostgreSQL
 
 # Wireframes
 ![Wireframe](https://i.imgur.com/4oUl6xO.jpg?1)
@@ -56,7 +56,7 @@
 
 
 # Future Development Plans
-I would like to add rsvp option so user can rsvp to events and make the code more clean.
+I would like to add cancel RSVP option in the future updates.
 
 # Setup Steps
 
