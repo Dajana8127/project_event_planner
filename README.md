@@ -1,12 +1,12 @@
 # Event Planner Client Application
 
-  The event planner app is a client facing app that allows clients to create, update and delete events. Users can see all created events and RSVP to them. 
+  The event planner app is a client facing app that allows clients to create, update and delete events. Users can see all created events and RSVP to them.
 
 # Links
 ### Deployed Client Site
-  <https://dajana8127.github.io/event_planner_client/>
-### Back-End Repository
-  <https://github.com/Dajana8127/project_event_planner>
+  <https://dajana8127.github.io/event-planner-client/>
+### Front-End Repository
+  <https://github.com/Dajana8127/event-planner-client>
 ### Deployed API
   <https://project-event-planner.herokuapp.com/>
 
